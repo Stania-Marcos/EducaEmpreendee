@@ -38,6 +38,11 @@ app.use(express.static(path.join(__dirname, '../../Front-End')));
     res.sendFile(path.join(__dirname, `../../Front-End/Html/${pagina}.html`));
   });
 });
+// Rota raiz redireciona para Main.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../../Front-End/Html/Main.html"));
+});
+
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
