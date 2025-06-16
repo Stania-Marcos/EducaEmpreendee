@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDUCA EMPREENDE - Login e Cadastro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../Css/index.css" />
+  </head>
+  <body
+    class="font-sans bg-gray-50 min-h-screen flex items-center justify-center p-4"
+  >
+    <div class="container mx-auto max-w-4xl">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+          <!-- Left Side - Illustration -->
+          <div
+            class="hidden md:block md:w-1/2 gradient-bg p-12 flex items-center justify-center"
+          >
+            <div class="text-center text-white">
+              <h2 class="text-3xl font-bold mb-4">Bem-vindo de volta!</h2>
+              <p class="mb-8">
+                Acesse sua conta para continuar sua jornada empreendedora.
+              </p>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3209/3209260.png"
+                alt="Login Illustration"
+                class="w-64 mx-auto"
+              />
+            </div>
+          </div>
+
+          <!-- Right Side - Forms -->
+          <div class="w-full md:w-1/2 p-8">
+            <div class="text-center mb-8">
+              <h1 class="text-3xl font-bold gradient-text mb-2">
+                EDUCA EMPREENDE
+              </h1>
+              <p class="text-gray-600">
+                Faça login ou cadastre-se para acessar o simulador de
+                diagnóstico
+              </p>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="flex mb-1">
+              <div class="tab-button active mr-1" onclick="openTab('login')">
+                <i class="fas fa-sign-in-alt mr-2"></i> Login
+              </div>
+              <div class="tab-button inactive" onclick="openTab('register')">
+                <i class="fas fa-user-plus mr-2"></i> Cadastro
+              </div>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login" class="tab-content active">
+              <form class="space-y-4" id="formLogin">
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    autocomplete="off"
+                    placeholder="seu@email.com"
+                    class="form-input"
+                    id="email"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >Senha</label
+                  >
+                  <input
+                    type="password"
+                    placeholder="Digite sua senha"
+                    class="form-input"
+                    id="senha"
+                    required
+                  />
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <label class="inline-flex items-center">
+                    <input
+                      type="checkbox"
+                      class="form-checkbox text-blue-600"
+                    />
+                    <span class="ml-2 text-gray-600">Lembrar de mim</span>
+                  </label>
+                  <a href="#" class="text-sm text-blue-600 hover:underline"
+                    >Esqueceu a senha?</a
+                  >
+                </div>
+
+                <button type="submit" class="submit-btn w-full">
+                  <i class="fas fa-sign-in-alt mr-2"></i> Entrar
+                </button>
+
+                <div class="relative my-6">
+                  <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-300"></div>
+                  </div>
+                  <div class="relative flex justify-center text-sm">
+                    <span class="px-2 bg-white text-gray-500"
+                      >Ou entre com</span
+                    >
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                  <button type="button" class="social-btn">
+                    <i class="fab fa-google text-red-500 mr-2"></i> Google
+                  </button>
+                  <button type="button" class="social-btn">
+                    <i class="fab fa-facebook-f text-blue-600 mr-2"></i>
+                    Facebook
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register" class="tab-content">
+              <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2"
+                      >Nome</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="Seu nome"
+                      class="form-input"
+                      autocomplete="off"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 font-medium mb-2"
+                      >Sobrenome</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="Seu sobrenome"
+                      autocomplete="off"
+                      class="form-input"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    placeholder="seu@email.com"
+                    class="form-input"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >Senha</label
+                  >
+                  <input
+                    type="password"
+                    placeholder="Crie uma senha"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2"
+                    >Confirmar Senha</label
+                  >
+                  <input
+                    type="password"
+                    placeholder="Confirme sua senha"
+                    class="form-input"
+                    required
+                  />
+                </div>
+
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    class="form-checkbox text-blue-600"
+                    required
+                  />
+                  <label for="terms" class="ml-2 text-gray-600 text-sm">
+                    Eu concordo com os
+                    <a href="#" class="text-blue-600 hover:underline"
+                      >Termos de Serviço</a
+                    >
+                    e
+                    <a href="#" class="text-blue-600 hover:underline"
+                      >Política de Privacidade</a
+                    >
+                  </label>
+                </div>
+
+                <button type="submit" class="submit-btn w-full">
+                  <i class="fas fa-user-plus mr-2"></i> Criar Conta
+                </button>
+
+                <div class="text-center text-sm text-gray-600 mt-4">
+                  Já tem uma conta?
+                  <a
+                    href="#"
+                    onclick="openTab('login')"
+                    class="text-blue-600 hover:underline"
+                    >Faça login</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../Javascript/index.js"></script>
+    <script src="../Javascript/register.js"></script>
+  </body>
+</html>

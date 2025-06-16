@@ -1,0 +1,154 @@
+
+  body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb;
+    color: #333;
+  }
+
+  header {
+    text-align: center;
+    padding: 40px 20px 10px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+      background: linear-gradient(135deg, #3b82f6 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  }
+  h2 {
+  margin-top: 40px;
+  background: linear-gradient(135deg, #3b82f6 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
+  header p {
+    color: #000000;
+    font-size: 2rem;
+  }
+
+  .section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .destaque {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+
+  .destaque img {
+   
+    width: 100%;
+    display: block;
+  }
+
+  .destaque-content {
+    padding: 20px;
+  }
+
+  .destaque-content h2 {
+    color: #1a202c;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .destaque-content p {
+    color: #000000;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .categoria {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+    background-color: #805ad5;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 30PX;
+    font-size: 1rem;
+  }
+
+ .categoria h2{
+    font-size: 30px;
+ }
+
+  .card {
+     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+  .card h3 {
+    margin-top: 0;
+    color: #2d3748;
+  }
+
+  .card p {
+    color: #000000;
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+
+  .formulario {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    margin-top: 40px;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  .formulario button {
+    background-color: #4f46e5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .formulario button:hover {
+    background-color: #4338ca;
+  }
+.imgc{
+    width: 70%;
+    height: 70%;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+#marketing{
+    margin-bottom: 20%;
+}

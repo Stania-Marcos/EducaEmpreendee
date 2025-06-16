@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDUCA EMPREENDE - Blog Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../Css/Admin.css" />
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Admin Section -->
+    <section id="admin" class="py-16 px-4">
+      <div class="container mx-auto max-w-6xl">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4 gradient-text">
+            Área de Administração
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Adicione novos posts ao blog facilmente
+          </p>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="flex mb-1">
+          <div class="tab-button active mr-1" onclick="openTab('add-post')">
+            <i class="fas fa-plus-circle mr-2"></i> Adicionar Post
+          </div>
+          <div class="tab-button inactive" onclick="openTab('manage-posts')">
+            <i class="fas fa-edit mr-2"></i> Gerenciar Posts
+          </div>
+        </div>
+
+        <!-- Add Post Tab -->
+        <div id="add-post" class="tab-content active">
+          <form id="post-form" class="space-y-6"  enctype="multipart/form-data">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-gray-700 font-medium mb-2">Título do Post</label >
+                <input type="text"  id="post-title" placeholder="Digite o título" class="form-input" name="titulo" autocomplete="off" required />
+              </div>
+              <div>
+                <label class="block text-gray-700 font-medium mb-2">Categoria</label>
+                <select id="post-category" class="form-input" name="categoria" required>
+                  <option value="">Selecione uma categoria</option>
+                  <option value="finance">Finanças</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="management">Gestão</option>
+                  <option value="technology">Tecnologia</option>
+                  <option value="trends">Tendências</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Imagem de Destaque</label>
+              <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center" >
+                <input type="file"id="post-image"accept="image/*" name="imagem" class="hidden"/>
+                <div id="image-upload-area" class="cursor-pointer">
+                  <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-2"></i>
+                  <p class="text-gray-500">
+                    Clique para selecionar uma imagem ou arraste e solte aqui
+                  </p>
+                  <p class="text-sm text-gray-400 mt-1">
+                    Tamanho recomendado: 1200x630 pixels
+                  </p>
+                </div>
+                <img id="image-preview"class="preview-image w-full"src="#"alt="Pré-visualização da imagem"/>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Conteúdo do Post</label>
+              <textarea id="post-content"rows="8" name="conteudo" placeholder="Digite o conteúdo do post aqui..."class="form-input" required ></textarea>
+            </div>
+
+            <div class="flex justify-end space-x-4">
+              <button type="button" id="cancel-button"
+                class="px-6 py-3 border border-gray-300 rounded-lg font-medium text-gray-700 hover:bg-gray-50" >
+                <i class="fas fa-times mr-2"></i> Cancelar
+              </button>
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-save mr-2"></i> Publicar Post
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Manage Posts Tab -->
+        <div id="manage-posts" class="tab-content">
+          <div class="mb-6 flex justify-between items-center">
+            <h3 class="text-xl font-bold text-gray-800">Posts Publicados</h3>
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Buscar posts..."
+                class="form-input pl-10"
+              />
+              <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full bg-white rounded-lg overflow-hidden">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Título
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Categoria
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Data
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Ações
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="posts-list" class="divide-y divide-gray-200">
+                <!-- Posts will be added here dynamically -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-6 flex justify-between items-center">
+            <div class="text-sm text-gray-500">
+              Mostrando <span id="showing-from">1</span> a
+              <span id="showing-to">5</span> de
+              <span id="total-posts">12</span> posts
+            </div>
+            <div class="flex space-x-2">
+              <button
+                class="px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-50"
+              >
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button
+                class="px-4 py-2 border rounded-lg bg-blue-500 text-white"
+              >
+                1
+              </button>
+              <button
+                class="px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-50"
+              >
+                2
+              </button>
+              <button
+                class="px-4 py-2 border rounded-lg text-gray-700 hover:bg-gray-50"
+              >
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../Javascript/Admin.js"></script>
+  </body>
+</html>

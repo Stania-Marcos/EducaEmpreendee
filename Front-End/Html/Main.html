@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDUCA EMPREENDE - Soluções para Empreendedores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../Css/Main.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6", // blue-500
+              secondary: "#EC4899", // pink-500
+              light: "#F9FAFB", // gray-50
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans bg-white text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <div
+            class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-3"
+          >
+            <i class="fas fa-lightbulb text-white text-xl"></i>
+          </div>
+          <h1
+            class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+          >
+            EDUCA EMPREENDE
+          </h1>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="font-medium hover:text-primary transition"
+            >Início</a
+          >
+          <a
+            href="DiagnosticoEmpresarial.html"
+            class="font-medium hover:text-primary transition"
+            >Diagnóstico</a
+          >
+          <a
+            href="servicos.html"
+            class="font-medium hover:text-primary transition"
+            >Serviços</a
+          >
+          <a href="blog.html" class="font-medium hover:text-primary transition"
+            >Blog</a
+          >
+         
+        </nav>
+        <button class="md:hidden text-gray-600" id="mobile-menu-button">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-white w-full absolute left-0 shadow-lg"
+        id="mobile-menu"
+      >
+        <div class="flex flex-col space-y-3 px-4 py-3">
+          <a
+            href="#home"
+            class="font-medium hover:text-primary transition py-2 border-b"
+            >Início</a
+          >
+          <a
+            href="DiagnosticoEmpresarial.html"
+            class="font-medium hover:text-primary transition py-2 border-b"
+            >Diagnóstico</a
+          >
+          <a
+            href="servicos.html"
+            class="font-medium hover:text-primary transition py-2 border-b"
+            >Serviços</a
+          >
+          <a
+            href="blog.html"
+            class="font-medium hover:text-primary transition py-2 border-b"
+            >Blog</a
+          >
+          <a href="" class="font-medium hover:text-primary transition py-2"
+            >Contato</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="relative overflow-hidden h-[600px]">
+      <!-- Carousel Slides -->
+      <div class="relative h-full w-full">
+        <!-- Slide 1 -->
+        <div
+          class="carousel-slide active h-full w-full flex items-center bg-gradient-to-r from-gray-900 to-gray-700"
+        >
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl text-blue-500 font-bold">
+              <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                Gestão especializada para MPMEs em Angola
+              </h2>
+              <p class="text-xl mb-6">
+                Soluções empresariais completas para otimizar sua gestão e
+                aumentar sua competitividade no mercado.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4"
+              >
+                <a
+                  href="servicos.html"
+                  class="bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-primary/90 transition text-center hover-grow"
+                  >Nossos Serviços</a
+                >
+                <a
+                  href="#contato"
+                  class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-gray-900 transition text-center hover-grow"
+                  >Fale Conosco</a
+                >
+              </div>
+            </div>
+          </div>
+          <img
+            src="../Imagens/i (15).webp"
+            alt="Gestão Empresarial"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="carousel-slide h-full w-full flex items-center bg-gradient-to-r from-blue-900 to-blue-700"
+        >
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl text-blue-500">
+              <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                Assessoria de Gestão Personalizada
+              </h2>
+              <p class="text-xl mb-6">
+                Consultoria especializada para alavancar seus resultados e
+                estruturar sua empresa.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4"
+              >
+                <a
+                  href="servicos.html"
+                  class="bg-secondary text-white font-bold py-3 px-6 rounded-full hover:bg-secondary/90 transition text-center hover-grow"
+                  >Conheça Nossas Soluções</a
+                >
+                <a
+                  href="DiagnosticoEmpresarial.html
+                  "
+                  class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-gray-900 transition text-center hover-grow"
+                  >Diagnóstico Gratuito</a
+                >
+              </div>
+            </div>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+            alt="Assessoria de Gestão"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="carousel-slide h-full w-full flex items-center bg-gradient-to-r from-purple-900 to-purple-700"
+        >
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl text-blue-500 font-bold">
+              <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                Literacia Administrativa para Empresários
+              </h2>
+              <p class="text-xl mb-6">
+                Capacitação em gestão empresarial para melhorar a administração
+                do seu negócio.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4"
+              >
+                <a
+                  href="#servicos"
+                  class="bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-primary/90 transition text-center hover-grow"
+                  >Saiba Mais</a
+                >
+                <a
+                  href="#contato"
+                  class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-gray-900 transition text-center hover-grow"
+                  >Agende uma Consulta</a
+                >
+              </div>
+            </div>
+          </div>
+          <img
+            src="../Imagens/i (16).webp"
+            alt="Literacia Administrativa"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button
+        id="carousel-prev"
+        class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full z-20 transition"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button
+        id="carousel-next"
+        class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full z-20 transition"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Carousel Indicators -->
+      <div
+        class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 z-20"
+      >
+        <button
+          class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"
+          data-slide="0"
+        ></button>
+        <button
+          class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"
+          data-slide="1"
+        ></button>
+        <button
+          class="carousel-indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"
+          data-slide="2"
+        ></button>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-light">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Como podemos te ajudar?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-xl card-shadow hover-grow transition"
+          >
+            <div
+              class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <i class="fas fa-chart-line text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-center mb-3">
+              Diagnóstico Empresarial
+            </h3>
+            <p class="text-gray-600 text-center">
+              Identifique pontos fortes e oportunidades de melhoria no seu
+              negócio com nosso simulador inteligente.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl card-shadow hover-grow transition"
+          >
+            <div
+              class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <i class="fas fa-building text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-center mb-3">Gestão de MPMEs</h3>
+            <p class="text-gray-600 text-center">
+              Soluções completas para micro, pequenas e médias empresas em
+              Angola.
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl card-shadow hover-grow transition"
+          >
+            <div
+              class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mb-4 mx-auto"
+            >
+              <i class="fas fa-hands-helping text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-center mb-3">
+              Consultoria Personalizada
+            </h3>
+            <p class="text-gray-600 text-center">
+              Assessoria de gestão especializada para o seu negócio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Nossos Serviços</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Soluções completas para gestão empresarial em Angola
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Service 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-md service-card">
+            <div class="flex items-start mb-4">
+              <div
+                class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-building text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Gestão das MPMEs em Angola</h3>
+                <p class="text-gray-600 mt-2">
+                  Soluções completas para micro, pequenas e médias empresas,
+                  incluindo planeamento estratégico, gestão financeira e
+                  operacional.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-md service-card">
+            <div class="flex items-start mb-4">
+              <div
+                class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-user-tie text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Assessoria de Gestão</h3>
+                <p class="text-gray-600 mt-2">
+                  Consultoria especializada para otimizar processos, melhorar
+                  resultados e implementar melhores práticas de gestão.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-md service-card">
+            <div class="flex items-start mb-4">
+              <div
+                class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-book text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Literacia Administrativa</h3>
+                <p class="text-gray-600 mt-2">
+                  Capacitação de empresários e gestores em conceitos
+                  fundamentais de administração e gestão empresarial.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="bg-white p-8 rounded-lg shadow-md service-card">
+            <div class="flex items-start mb-4">
+              <div
+                class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="fas fa-sitemap text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">
+                  Criação de Departamento de Gestão
+                </h3>
+                <p class="text-gray-600 mt-2">
+                  Estruturação completa de departamentos de gestão, incluindo
+                  processos, ferramentas e equipes especializadas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#contato"
+            class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-full hover:bg-primary/90 transition hover-grow"
+          >
+            Fale Conosco para Mais Informações
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagnostic Section -->
+    <section id="diagnostico" class="py-16 bg-light">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+            <h2 class="text-3xl font-bold mb-4">
+              Diagnóstico Empresarial Gratuito
+            </h2>
+            <p class="text-xl text-gray-600 mb-6">
+              Identifique os pontos fortes e oportunidades de melhoria no seu
+              negócio com nossa ferramenta de diagnóstico.
+            </p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Análise completa em menos de 10 minutos</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Relatório personalizado com recomendações</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-primary mr-2"></i>
+                <span>Sem compromisso ou custo</span>
+              </li>
+            </ul>
+            <a
+              href="#form-diagnostico"
+              class="inline-block bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-primary/90 transition hover-grow"
+            >
+              Realizar Diagnóstico
+            </a>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Diagnóstico Empresarial"
+              class="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Artigos e Conteúdos</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Aprenda mais sobre gestão empresarial com nossos artigos
+            especializados
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Article 1 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover-grow">
+            <img
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Gestão Financeira"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <span class="text-sm text-primary font-semibold"
+                >Gestão Financeira</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-3">
+                5 Estratégias para Melhorar o Fluxo de Caixa
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Aprenda técnicas práticas para otimizar o fluxo de caixa da sua
+                empresa e evitar problemas financeiros.
+              </p>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >Ler mais →</a
+              >
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover-grow">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Gestão de Equipes"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <span class="text-sm text-primary font-semibold"
+                >Gestão de Equipes</span
+              >
+              <h3 class="text-xl font-bold mt-2 mb-3">
+                Como Montar um Departamento de Gestão Eficiente
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Passo a passo para estruturar um departamento de gestão que
+                realmente agregue valor ao seu negócio.
+              </p>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >Ler mais →</a
+              >
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md hover-grow">
+            <img
+              src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+              alt="Legislação"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <span class="text-sm text-primary font-semibold">Legislação</span>
+              <h3 class="text-xl font-bold mt-2 mb-3">
+                Atualizações Legais para MPMEs em Angola
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Conheça as últimas mudanças na legislação que afetam micro,
+                pequenas e médias empresas no país.
+              </p>
+              <a href="#" class="text-primary font-semibold hover:underline"
+                >Ler mais →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-block border-2 border-primary text-primary font-bold py-3 px-8 rounded-full hover:bg-primary hover:text-white transition hover-grow"
+          >
+            Ver Todos os Artigos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-light">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+            <h2 class="text-3xl font-bold mb-4">Entre em Contato</h2>
+            <p class="text-xl text-gray-600 mb-6">
+              Estamos prontos para ajudar sua empresa a alcançar melhores
+              resultados.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold">Endereço</h3>
+                  <p class="text-gray-600">Luanda, Angola</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold">Email</h3>
+                  <p class="text-gray-600">contato@educaempreende.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4"
+                >
+                  <i class="fas fa-phone-alt text-white"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold">Telefone</h3>
+                  <p class="text-gray-600">+244 123 456 789</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="font-bold mb-4">Siga-nos</h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center text-white hover:opacity-90 transition"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:w-1/2">
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <h3 class="text-2xl font-bold mb-6">Envie-nos uma Mensagem</h3>
+              <form>
+                <div class="mb-4">
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Nome</label
+                  >
+                  <input
+                    type="text"
+                    autocomplete="off"
+                    id="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    autocomplete="off"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="phone"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Telefone</label
+                  >
+                  <input
+                    type="tel"autocomplete="off"
+                    id="phone"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="service"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Serviço de Interesse</label
+                  >
+                  <select
+                    id="service"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    <option value="">Selecione um serviço</option>
+                    <option value="gestao">Gestão das MPMEs em Angola</option>
+                    <option value="assessoria">Assessoria de Gestão</option>
+                    <option value="literacia">Literacia Administrativa</option>
+                    <option value="departamento">
+                      Criação de Departamento de Gestão
+                    </option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="message"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Mensagem</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary/90 transition"
+                >
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 gradient-bg text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4">Receba Nossas Atualizações</h2>
+          <p class="text-xl mb-6">
+            Inscreva-se na nossa newsletter para receber artigos, dicas e
+            novidades sobre gestão empresarial.
+          </p>
+          <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+            <input
+              type="email"
+              placeholder="Seu melhor email"
+              class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-900"
+            />
+            <button
+              type="submit"
+              class="bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition"
+            >
+              Inscrever-se
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center mr-3"
+              >
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3 class="text-xl font-bold">EDUCA EMPREENDE</h3>
+            </div>
+            <p class="text-gray-400">
+              Soluções completas em gestão empresarial para MPMEs em Angola.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Serviços</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Gestão das MPMEs</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Assessoria de Gestão</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Literacia Administrativa</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Criação de Departamento</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Links Úteis</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Diagnóstico Gratuito</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Política de Privacidade</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Termos de Serviço</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contato</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>
+                <span class="text-gray-400">Luanda, Angola</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-gray-400 mr-2"></i>
+                <span class="text-gray-400">contato@educaempreende.com</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt text-gray-400 mr-2"></i>
+                <span class="text-gray-400">+244 123 456 789</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0">
+            © 2023 EDUCA EMPREENDE. Todos os direitos reservados.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 right-6 w-12 h-12 rounded-full gradient-bg text-white shadow-lg flex items-center justify-center transition opacity-0 invisible"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="../Javascript/Main.js"></script>
+  </body>
+</html>
